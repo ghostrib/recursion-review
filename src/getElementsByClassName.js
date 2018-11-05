@@ -7,10 +7,23 @@
 var getElementsByClassName = function(className) {
   var result = [];
   var findClass = function(node) {
-     node.forEach(function(element){
-    })
-  
+debugger;
+    
+    var list = node.childNodes;
+     if (list) {
+      list.forEach(function(element){
+        if (list.contains(className)) {
+          result.push(node);
+        }
+      });
+    }
+    
+    if (node.childNodes.length > 0) {
+      findClass(node.childNodes);
+    }
   }
+  findClass(document.body);
+  return result;
 //get a list of all the nodes that have been loaded in DOM
 //loop through through the list of nodes -recursion to find children
 //pull elements with === (classname)
