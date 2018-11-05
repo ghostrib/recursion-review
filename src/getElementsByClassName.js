@@ -4,7 +4,15 @@
 // };
 
 // But instead we're going to implement it from scratch:
-var getElementsByClassName = function(className
-) {
-  // your code here
+var getElementsByClassName = function(className) {
+  var result = [];
+  var findClass = function(node) {
+     node.forEach(function(element){
+    })
+  
+  }
+//get a list of all the nodes that have been loaded in DOM
+//loop through through the list of nodes -recursion to find children
+//pull elements with === (classname)
+//declare a 
 };
